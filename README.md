@@ -40,7 +40,12 @@ for [eslint](https://github.com/eslint/eslint). The rule looks one character *af
 the identifier to see if it is followed by colon `:` character.
 If yes, this is a property name inside an object, and underscore character `_` is allowed.
 
-## running
+## no-for-loops
+
+Warns or errors if you use for loops in your code. I consider for loops harmful for their side effects,
+and even consider `.forEach` dangerous, see [Avoid forEach][avoid forEach].
+
+# running
 
 Place `camel_case.js` into local folder, pass to eslint using `--rulesdir` option.
 Enable `camel_case` rule from `.eslintrc` file
@@ -107,3 +112,4 @@ OTHER DEALINGS IN THE SOFTWARE.
 [eslint-rules-dependencies-url]: https://david-dm.org/bahmutov/eslint-rules
 [eslint-rules-devdependencies-image]: https://david-dm.org/bahmutov/eslint-rules/dev-status.png
 [eslint-rules-devdependencies-url]: https://david-dm.org/bahmutov/eslint-rules#info=devDependencies
+[avoid forEach]: http://aeflash.com/2014-11/avoid-foreach.html

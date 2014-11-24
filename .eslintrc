@@ -10,6 +10,7 @@
     "camel_case": 1,
     "quotes": 0,
     "no-unused-vars": 0,
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "no-for-loops": 1
   }
 }
