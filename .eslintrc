@@ -1,0 +1,15 @@
+{
+  "env": {
+    "node": true
+  },
+  // 0 - turn rule off
+  // 1 - rule generates warnings
+  // 2 - rule generates errors
+  "rules": {
+    "camelcase": 0,
+    "camel_case": 1,
+    "quotes": 0,
+    "no-unused-vars": 0,
+    "no-underscore-dangle": 0
+  }
+}

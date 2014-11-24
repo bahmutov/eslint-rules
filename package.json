@@ -1,0 +1,30 @@
+{
+  "name": "eslint-rules",
+  "version": "0.0.0",
+  "description": "My custom eslint rules in addition to the ones provided at http://eslint.org/",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/gt/gt.js test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahmutov/eslint-rules.git"
+  },
+  "keywords": [
+    "eslint",
+    "lint",
+    "javascript",
+    "rule",
+    "rules",
+    "custom"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/eslint-rules/issues"
+  },
+  "homepage": "https://github.com/bahmutov/eslint-rules",
+  "devDependencies": {
+    "gt": "0.8.44"
+  }
+}
