@@ -45,6 +45,17 @@ If yes, this is a property name inside an object, and underscore character `_` i
 Warns or errors if you use for loops in your code. I consider for loops harmful for their side effects,
 and even consider `.forEach` dangerous, see [Avoid forEach][avoid forEach].
 
+## no-single-line-objects
+
+Does not allow you to nest objects into single line. Single property object can be single line
+
+    :::javascript
+    // allowed
+    var foo = { foo: 'foo' };
+    // not allowed
+    var foo = { foo: 'foo', bar: 'bar' };
+    var foo = { foo: { bar: 'bar' } };
+
 # running
 
 Place `camel_case.js` into local folder, pass to eslint using `--rulesdir` option.
