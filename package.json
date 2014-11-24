@@ -1,6 +1,6 @@
 {
   "name": "eslint-rules",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "My custom eslint rules in addition to the ones provided at http://eslint.org/",
   "main": "index.js",
   "scripts": {

@@ -4,8 +4,6 @@
 module.exports = function(context) {
   'use strict';
 
-  // TODO(gleb): open source this eslint rule
-
   return {
     ObjectExpression: function(node) {
       var nProperties = node.properties.length;
