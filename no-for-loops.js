@@ -4,7 +4,7 @@
 module.exports = function(context) {
 
   return {
-    ForStatement: function(node) {
+    Function: function(node) {
       context.report(node, "for loops are not allowed", { identifier: node.name });
     }
   };

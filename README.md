@@ -49,12 +49,40 @@ and even consider `.forEach` dangerous, see [Avoid forEach][avoid forEach].
 
 Does not allow you to nest objects into single line. Single property object can be single line
 
-    :::javascript
-    // allowed
-    var foo = { foo: 'foo' };
-    // not allowed
-    var foo = { foo: 'foo', bar: 'bar' };
-    var foo = { foo: { bar: 'bar' } };
+```js
+// allowed
+var foo = { foo: 'foo' };
+// not allowed
+var foo = { foo: 'foo', bar: 'bar' };
+var foo = { foo: { bar: 'bar' } };
+```
+
+## potential-point-free
+
+Warns if a function just calls another function passing arguments and can potentially
+become point-free. Point-free programming [eliminates complexity and superfluous variables][point-free].
+Only functions with single call expression are considered. The arguments must match exactly.
+
+```js
+/* eslint potential-point-free:1 */
+function print(x) {
+  console.log(x);
+}
+[1, 2, 3].forEach(function printX(x) {
+  print(x);
+});
+// output 7:18  warning  printX   potential-point-free
+```
+
+Note: due to signatures and optional arguments, sometimes functions should not be point free directly.
+For example the array iterators pass item, index and the array itself, which causes problems for `parseInt`
+
+```js
+['1', '2', '3'].forEach(parseInt);
+// [1, 'NaN', 'NaN']
+```
+
+In this case, you can use [unary adaptor](http://bahmutov.calepin.co/iterator-callbacks.html).
 
 # running
 
@@ -124,3 +152,4 @@ OTHER DEALINGS IN THE SOFTWARE.
 [eslint-rules-devdependencies-image]: https://david-dm.org/bahmutov/eslint-rules/dev-status.png
 [eslint-rules-devdependencies-url]: https://david-dm.org/bahmutov/eslint-rules#info=devDependencies
 [avoid forEach]: http://aeflash.com/2014-11/avoid-foreach.html
+[point-free]: http://bahmutov.calepin.co/point-free-programming-is-not-pointless.html
