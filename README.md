@@ -82,7 +82,8 @@ For example the array iterators pass item, index and the array itself, which cau
 // [1, 'NaN', 'NaN']
 ```
 
-In this case, you can use [unary adaptor](http://bahmutov.calepin.co/iterator-callbacks.html).
+In this case, you can use [unary adaptor](http://bahmutov.calepin.co/iterator-callbacks.html) or
+3rd party iterator with simpler signature, [R.forEach](http://ramdajs.com/docs/R.html#forEach).
 
 # running
 
