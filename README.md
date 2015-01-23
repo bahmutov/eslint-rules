@@ -8,6 +8,19 @@
 [![dependencies][eslint-rules-dependencies-image] ][eslint-rules-dependencies-url]
 [![devdependencies][eslint-rules-devdependencies-image] ][eslint-rules-devdependencies-url]
 
+## no-long-files
+
+> Detect source files with too many lines
+
+    first argument: rule severity (0 - no check, 1 - warning, 2 - error)
+    second argument: max number of allowed lines
+    "no-long-files": [2, 70]
+
+Prints something like
+
+    potential-point-free.js
+      0:0  error  file line count 51 exceeded line limit 50  no-long-files
+
 ## camel_case
 
 > ESLint rule for enforcing camelCame names but allowing _ in property names
