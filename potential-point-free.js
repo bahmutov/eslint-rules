@@ -1,8 +1,10 @@
 function isFunction(node) {
+  'use strict';
   return node.type === 'FunctionExpression';
 }
 
 function isSingleCall(node) {
+  'use strict';
   return node.body &&
     node.body.type === 'BlockStatement' &&
     node.body.body.length === 1 &&
@@ -11,6 +13,7 @@ function isSingleCall(node) {
 }
 
 function hasSameArguments(node) {
+  'use strict';
   var topArguments = node.params;
   var innerArguments = node.body.body[0].expression.arguments;
 
@@ -21,6 +24,7 @@ function hasSameArguments(node) {
 }
 
 function isPotentialPointFree(node) {
+  'use strict';
   return isFunction(node) &&
     isSingleCall(node) &&
     hasSameArguments(node);

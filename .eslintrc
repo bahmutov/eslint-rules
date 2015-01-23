@@ -11,6 +11,7 @@
     "quotes": 0,
     "no-unused-vars": 0,
     "no-underscore-dangle": 0,
-    "no-for-loops": 1
+    "no-for-loops": 1,
+    "no-long-files": [2, 70]
   }
 }

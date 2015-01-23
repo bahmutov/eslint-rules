@@ -12,6 +12,14 @@ module.exports = function (grunt) {
       src: [sourceFiles, '!camel_case.js']
     },
 
+    eslint: {
+      target: sourceFiles,
+      options: {
+        config: '.eslintrc',
+        rulesdir: ['.']
+      }
+    },
+
     jshint: {
       all: sourceFiles,
       options: {
@@ -31,6 +39,6 @@ module.exports = function (grunt) {
   var plugins = module.require('matchdep').filterDev('grunt-*');
   plugins.forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask('lint', ['filenames', 'jshint', 'jscs']);
+  grunt.registerTask('lint', ['filenames', 'jshint', 'jscs', 'eslint']);
   grunt.registerTask('default', ['deps-ok', 'nice-package', 'lint']);
 };
