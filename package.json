@@ -1,7 +1,7 @@
 {
   "name": "eslint-rules",
   "description": "My custom eslint rules in addition to the ones provided at http://eslint.org/",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bugs": {
     "url": "https://github.com/bahmutov/eslint-rules/issues"
