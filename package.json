@@ -1,15 +1,29 @@
 {
   "name": "eslint-rules",
-  "version": "0.2.0",
   "description": "My custom eslint rules in addition to the ones provided at http://eslint.org/",
-  "main": "index.js",
-  "scripts": {
-    "test": "node node_modules/gt/gt.js test/test.js"
+  "version": "0.2.0",
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/bahmutov/eslint-rules/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:bahmutov/eslint-rules.git"
+  "contributors": [],
+  "devDependencies": {
+    "eslint": "0.12.0",
+    "grunt": "0.4.5",
+    "grunt-contrib-jshint": "0.10.0",
+    "grunt-deps-ok": "0.5.2",
+    "grunt-filenames": "0.4.0",
+    "grunt-jscs": "1.1.0",
+    "grunt-nice-package": "0.9.2",
+    "gt": "0.8.47",
+    "jshint-summary": "0.4.0",
+    "matchdep": "0.3.0",
+    "pre-git": "0.1.1"
   },
+  "engines": {
+    "node": "> 0.10.*"
+  },
+  "homepage": "https://github.com/bahmutov/eslint-rules",
   "keywords": [
     "eslint",
     "lint",
@@ -18,15 +32,15 @@
     "rules",
     "custom"
   ],
-  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bahmutov/eslint-rules/issues"
+  "main": "index.js",
+  "pre-commit": "npm test",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahmutov/eslint-rules.git"
   },
-  "homepage": "https://github.com/bahmutov/eslint-rules",
-  "devDependencies": {
-    "gt": "0.8.47",
-    "pre-git": "0.1.1"
-  },
-  "pre-commit": "npm test"
+  "scripts": {
+    "test": "node node_modules/gt/gt.js test/test.js",
+    "no-long-files": "node node_modules/eslint/bin/eslint.js --rulesdir . test/long-file.js"
+  }
 }

@@ -1,7 +1,5 @@
-'use strict';
-
-/* globals module */
 module.exports = function(context) {
+  'use strict';
 
   function isConstant(str) {
     var allCapsWithUnderScore = /^[A-Z_]+$/;
