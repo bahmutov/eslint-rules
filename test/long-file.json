@@ -1,0 +1,18 @@
+{
+  // this is JSON file, but ESLint allows C-style comments
+
+  "env": {
+    "browser": false,
+    "node": true
+  },
+
+  // 0 - turn rule off
+  // 1 - rule generates warnings
+  // 2 - rule generates errors
+  "rules": {
+    "no-long-files": [1, 100]
+  },
+
+  "globals": {
+  }
+}

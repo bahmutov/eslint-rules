@@ -1,4 +1,4 @@
-module.exports = function(context) {
+module.exports = function (context) {
   'use strict';
 
   function isConstant(str) {
@@ -20,7 +20,7 @@ module.exports = function(context) {
   }
 
   return {
-    Identifier: function(node) {
+    Identifier: function (node) {
       var nameWithMaybeColon = context.getSource(node, 0, 1);
       if (nameWithMaybeColon[nameWithMaybeColon.length - 1] !== ':') {
         if (nameWithMaybeColon.indexOf('_') !== -1) {

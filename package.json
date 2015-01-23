@@ -41,6 +41,6 @@
   },
   "scripts": {
     "test": "node node_modules/gt/gt.js test/test.js",
-    "no-long-files": "node node_modules/eslint/bin/eslint.js --rulesdir . test/long-file.js"
+    "no-long-files": "node node_modules/eslint/bin/eslint.js --rulesdir . -c test/long-file.json test/long-file.js"
   }
 }

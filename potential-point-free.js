@@ -26,14 +26,14 @@ function isPotentialPointFree(node) {
     hasSameArguments(node);
 }
 
-module.exports = function(context) {
+module.exports = function (context) {
   'use strict';
 
   // read http://bahmutov.calepin.co/point-free-programming-is-not-pointless.html
   // for advantages of point-free programming
 
   return {
-    FunctionExpression: function(node) {
+    FunctionExpression: function (node) {
       // console.log('function expression', node.id && node.id.name);
 
       if (isPotentialPointFree(node)) {
