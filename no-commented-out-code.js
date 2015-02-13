@@ -1,6 +1,13 @@
 var espree = require('espree');
 var quote = require('quote');
 
+function isJshint(text) {
+  'use strict';
+  return /^jshint\ /.test(text);
+}
+console.assert(isJshint('jshint -W098'));
+console.assert(!isJshint('not jshint'));
+
 function isSingleWord(text) {
   'use strict';
   return /^[\w-]*$/.test(text);
@@ -13,7 +20,7 @@ console.assert(!isSingleWord('var bar'));
 
 function isValidCode(text) {
   'use strict';
-  if (isSingleWord(text)) {
+  if (isSingleWord(text) || isJshint(text)) {
     return false;
   }
 
