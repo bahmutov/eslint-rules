@@ -1,6 +1,7 @@
 module.exports = function (context) {
   'use strict';
 
+  // TODO use context.getSourceLines()
   var src = require('fs').readFileSync(context.getFilename(), 'utf-8');
   var linesN = src.split(require('os').EOL).length;
   // console.log(context.getFilename(), 'has', linesN, 'lines');

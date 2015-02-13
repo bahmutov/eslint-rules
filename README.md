@@ -8,6 +8,30 @@
 [![dependencies][eslint-rules-dependencies-image] ][eslint-rules-dependencies-url]
 [![devdependencies][eslint-rules-devdependencies-image] ][eslint-rules-devdependencies-url]
 
+## no-commented-out-code
+
+> Detects code in the single or multiline comments
+
+```js
+/* eslint no-commented-out-code:1 */
+/*
+function foo() {
+  return 'foo';
+}*/
+// this is normal comment
+function baz() {
+  'use strict';
+  // and this is another normal comment
+  // var bar = 'bar';
+  return 'baz';
+}
+```
+
+Produces the following output:
+
+     2:0  warning  commented out code "function foo() {" (4 lines)  no-commented-out-code
+    10:2  warning  commented out code "var bar = 'bar';" (1 line)   no-commented-out-code
+    
 ## no-long-files
 
 > Detect source files with too many lines
