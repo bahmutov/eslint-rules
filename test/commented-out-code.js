@@ -10,3 +10,6 @@ function baz() {
   // var bar = 'bar';
   return 'baz';
 }
+// next - empty comment
+//
+// click

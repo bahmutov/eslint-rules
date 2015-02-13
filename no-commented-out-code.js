@@ -1,8 +1,21 @@
 var espree = require('espree');
 var quote = require('quote');
 
+function isSingleWord(text) {
+  'use strict';
+  return /^\w*$/.test(text);
+}
+console.assert(isSingleWord('fooBar'));
+console.assert(isSingleWord(''));
+console.assert(isSingleWord('click'));
+console.assert(!isSingleWord('var bar'));
+
 function isValidCode(text) {
   'use strict';
+  if (isSingleWord(text)) {
+    return false;
+  }
+
   try {
     var ast = espree.parse(text);
     return !!ast;
@@ -32,7 +45,7 @@ module.exports = function (context) {
   var comments = context.getAllComments();
 
   comments.filter(function (comment) {
-    return isValidCode(comment.value);
+    return isValidCode(comment.value.trim());
   }).forEach(function (commentedCode) {
     var code = cut(commentedCode.value.trim());
     var lines = commentedCode.loc.end.line - commentedCode.loc.start.line + 1;
