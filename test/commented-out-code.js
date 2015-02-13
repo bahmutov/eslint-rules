@@ -13,3 +13,4 @@ function baz() {
 // next - empty comment
 //
 // click
+// browser-specific

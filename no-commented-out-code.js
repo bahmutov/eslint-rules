@@ -3,11 +3,12 @@ var quote = require('quote');
 
 function isSingleWord(text) {
   'use strict';
-  return /^\w*$/.test(text);
+  return /^[\w-]*$/.test(text);
 }
 console.assert(isSingleWord('fooBar'));
 console.assert(isSingleWord(''));
 console.assert(isSingleWord('click'));
+console.assert(isSingleWord('browser-specific'));
 console.assert(!isSingleWord('var bar'));
 
 function isValidCode(text) {
