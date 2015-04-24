@@ -119,7 +119,7 @@ For example the array iterators pass item, index and the array itself, which cau
 // [1, 'NaN', 'NaN']
 ```
 
-In this case, you can use [unary adaptor](http://bahmutov.calepin.co/iterator-callbacks.html) or
+In this case, you can use [unary adaptor](http://glebbahmutov.com/blog/iterator-callbacks/) or
 3rd party iterator with simpler signature, [R.forEach](http://ramdajs.com/docs/R.html#forEach).
 
 # running
@@ -146,7 +146,7 @@ Author: Gleb Bahmutov &copy; 2014
 
 * [@bahmutov](https://twitter.com/bahmutov)
 * [glebbahmutov.com](http://glebbahmutov.com)
-* [blog](http://bahmutov.calepin.co/)
+* [blog](http://glebbahmutov.com/blog/)
 
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
@@ -190,4 +190,4 @@ OTHER DEALINGS IN THE SOFTWARE.
 [eslint-rules-devdependencies-image]: https://david-dm.org/bahmutov/eslint-rules/dev-status.png
 [eslint-rules-devdependencies-url]: https://david-dm.org/bahmutov/eslint-rules#info=devDependencies
 [avoid forEach]: http://aeflash.com/2014-11/avoid-foreach.html
-[point-free]: http://bahmutov.calepin.co/point-free-programming-is-not-pointless.html
+[point-free]: http://glebbahmutov.com/blog/point-free-programming-is-not-pointless/
