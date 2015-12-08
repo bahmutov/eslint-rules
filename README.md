@@ -1,4 +1,4 @@
-# eslint-rules
+# eslint-plugin-extra-rules
 
 > Additional rules for eslint
 
@@ -7,6 +7,10 @@
 [![Build status][eslint-rules-ci-image] ][eslint-rules-ci-url]
 [![dependencies][eslint-rules-dependencies-image] ][eslint-rules-dependencies-url]
 [![devdependencies][eslint-rules-devdependencies-image] ][eslint-rules-devdependencies-url]
+
+## Install
+
+    npm install --save-dev eslint-plugin-extra-rules
 
 ## no-commented-out-code
 
@@ -31,7 +35,7 @@ Produces the following output:
 
      2:0  warning  commented out code "function foo() {" (4 lines)  no-commented-out-code
     10:2  warning  commented out code "var bar = 'bar';" (1 line)   no-commented-out-code
-    
+
 ## no-long-files
 
 > Detect source files with too many lines
