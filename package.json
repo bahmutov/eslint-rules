@@ -26,7 +26,8 @@
   ],
   "files": [
     "*.js",
-    "!Gruntfile.js"
+    "!Gruntfile.js",
+    "src"
   ],
   "dependencies": {
     "espree": "3.0.0-alpha-1",
@@ -69,7 +70,7 @@
   },
   "scripts": {
     "build": "grunt",
-    "test": "gt test/test.js",
+    "test": "gt test/test.js test/is-constant.js",
     "no-long-files": "eslint --rulesdir . -c test/long-file.json test/long-file.js",
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",

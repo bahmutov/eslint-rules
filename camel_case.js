@@ -1,10 +1,7 @@
-module.exports = function (context) {
-  'use strict';
+var isConstant = require('./src/is-constant');
 
-  function isConstant(str) {
-    var allCapsWithUnderScore = /^[A-Z_]+$/;
-    return allCapsWithUnderScore.test(str);
-  }
+module.exports = function camelCase(context) {
+  'use strict';
 
   function isFrontOrBackUnderscore(str) {
     var k = str.indexOf('_');
