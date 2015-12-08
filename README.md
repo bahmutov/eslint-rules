@@ -7,6 +7,8 @@
 [![Build status][eslint-rules-ci-image] ][eslint-rules-ci-url]
 [![dependencies][eslint-rules-dependencies-image] ][eslint-rules-dependencies-url]
 [![devdependencies][eslint-rules-devdependencies-image] ][eslint-rules-devdependencies-url]
+[![semantic-release][semantic-image] ][semantic-url]
+[![manpm](https://img.shields.io/badge/manpm-%E2%9C%93-3399ff.svg)](https://github.com/bahmutov/manpm)
 
 ## Install
 
@@ -195,3 +197,5 @@ OTHER DEALINGS IN THE SOFTWARE.
 [eslint-rules-devdependencies-url]: https://david-dm.org/bahmutov/eslint-rules#info=devDependencies
 [avoid forEach]: http://aeflash.com/2014-11/avoid-foreach.html
 [point-free]: http://glebbahmutov.com/blog/point-free-programming-is-not-pointless/
+[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release

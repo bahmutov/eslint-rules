@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-extra-rules",
   "description": "My custom eslint rules in addition to the ones provided at http://eslint.org/",
-  "version": "0.4.3",
+  "version": "0.0.0-semantic-release",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bugs": {
     "url": "https://github.com/bahmutov/eslint-rules/issues"
@@ -11,7 +11,8 @@
       "commit-msg": "validate-commit-msg",
       "pre-commit": [
         "npm run build",
-        "npm test"
+        "npm test",
+        "npm run no-long-files"
       ],
       "pre-push": [],
       "post-commit": [],
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "eslint": "0.14.1",
+    "git-issues": "1.2.0",
     "grunt": "0.4.5",
     "grunt-cli": "0.1.13",
     "grunt-contrib-jshint": "0.11.0",
@@ -36,7 +38,8 @@
     "gt": "0.9.1",
     "jshint-summary": "0.4.0",
     "matchdep": "0.3.0",
-    "pre-git": "2.0.2"
+    "pre-git": "2.0.2",
+    "semantic-release": "4.3.5"
   },
   "engines": {
     "node": "> 0.10.*"
@@ -54,12 +57,14 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:bahmutov/eslint-rules.git"
+    "url": "https://github.com/bahmutov/eslint-rules.git"
   },
   "scripts": {
     "build": "grunt",
     "test": "gt test/test.js",
-    "no-long-files": "node node_modules/eslint/bin/eslint.js --rulesdir . -c test/long-file.json test/long-file.js",
-    "commit": "commit-wizard"
+    "no-long-files": "eslint --rulesdir . -c test/long-file.json test/long-file.js",
+    "commit": "git-issues && commit-wizard",
+    "issues": "git-issues",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   }
 }
