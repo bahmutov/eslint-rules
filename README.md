@@ -187,15 +187,16 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[eslint-rules-icon]: https://nodei.co/npm/eslint-rules.png?downloads=true
-[eslint-rules-url]: https://npmjs.org/package/eslint-rules
+[eslint-rules-icon]: https://nodei.co/npm/eslint-plugin-extra-rules.png?downloads=true
+[eslint-rules-url]: https://npmjs.org/package/eslint-plugin-extra-rules
 [eslint-rules-ci-image]: https://travis-ci.org/bahmutov/eslint-rules.png?branch=master
 [eslint-rules-ci-url]: https://travis-ci.org/bahmutov/eslint-rules
 [eslint-rules-dependencies-image]: https://david-dm.org/bahmutov/eslint-rules.png
 [eslint-rules-dependencies-url]: https://david-dm.org/bahmutov/eslint-rules
 [eslint-rules-devdependencies-image]: https://david-dm.org/bahmutov/eslint-rules/dev-status.png
 [eslint-rules-devdependencies-url]: https://david-dm.org/bahmutov/eslint-rules#info=devDependencies
-[avoid forEach]: http://aeflash.com/2014-11/avoid-foreach.html
-[point-free]: http://glebbahmutov.com/blog/point-free-programming-is-not-pointless/
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
+
+[avoid forEach]: http://aeflash.com/2014-11/avoid-foreach.html
+[point-free]: http://glebbahmutov.com/blog/point-free-programming-is-not-pointless/
