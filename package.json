@@ -21,7 +21,13 @@
       "post-merge": []
     }
   },
-  "contributors": [],
+  "contributors": [
+    "Eric Wooley <ericwooley@gmail.com>"
+  ],
+  "files": [
+    "*.js",
+    "!Gruntfile.js"
+  ],
   "dependencies": {
     "espree": "3.0.0-alpha-1",
     "quote": "0.4.0"
