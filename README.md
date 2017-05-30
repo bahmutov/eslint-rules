@@ -14,12 +14,28 @@
 
     npm install --save-dev eslint-plugin-extra-rules
 
-## no-commented-out-code
+## Example Configuration
+
+Add to your `.eslintrc`:
+
+``` js
+{
+    "plugins": ["extra-rules"],
+    "rules": {
+        "extra-rules/no-commented-out-code": "warn",
+        // Your other rules...
+    }
+}
+```
+
+## Rules
+
+### no-commented-out-code
 
 > Detects code in the single or multiline comments
 
 ```js
-/* eslint no-commented-out-code:1 */
+/* eslint extra-rules/no-commented-out-code: "warn" */
 /*
 function foo() {
   return 'foo';
@@ -38,7 +54,7 @@ Produces the following output:
      2:0  warning  commented out code "function foo() {" (4 lines)  no-commented-out-code
     10:2  warning  commented out code "var bar = 'bar';" (1 line)   no-commented-out-code
 
-## no-long-files
+### no-long-files
 
 > Detect source files with too many lines
 
@@ -51,7 +67,7 @@ Prints something like
     potential-point-free.js
       0:0  error  file line count 51 exceeded line limit 50  no-long-files
 
-## camel_case
+### camel_case
 
 > ESLint rule for enforcing camelCame names but allowing _ in property names
 
@@ -83,12 +99,12 @@ for [eslint](https://github.com/eslint/eslint). The rule looks one character *af
 the identifier to see if it is followed by colon `:` character.
 If yes, this is a property name inside an object, and underscore character `_` is allowed.
 
-## no-for-loops
+### no-for-loops
 
 Warns or errors if you use for loops in your code. I consider for loops harmful for their side effects,
 and even consider `.forEach` dangerous, see [Avoid forEach][avoid forEach].
 
-## no-single-line-objects
+### no-single-line-objects
 
 Does not allow you to nest objects into single line. Single property object can be single line
 
@@ -100,14 +116,14 @@ var foo = { foo: 'foo', bar: 'bar' };
 var foo = { foo: { bar: 'bar' } };
 ```
 
-## potential-point-free
+### potential-point-free
 
 Warns if a function just calls another function passing arguments and can potentially
 become point-free. Point-free programming [eliminates complexity and superfluous variables][point-free].
 Only functions with single call expression are considered. The arguments must match exactly.
 
 ```js
-/* eslint potential-point-free:1 */
+/* eslint extra-rules/potential-point-free: "warn" */
 function print(x) {
   console.log(x);
 }
@@ -128,25 +144,7 @@ For example the array iterators pass item, index and the array itself, which cau
 In this case, you can use [unary adaptor](http://glebbahmutov.com/blog/iterator-callbacks/) or
 3rd party iterator with simpler signature, [R.forEach](http://ramdajs.com/docs/R.html#forEach).
 
-# running
-
-Place `camel_case.js` into local folder, pass to eslint using `--rulesdir` option.
-Enable `camel_case` rule from `.eslintrc` file
-
-    // .eslintrc
-    {
-      // 0 - turn rule off
-      // 1 - rule generates warnings
-      // 2 - rule generates errors
-      "rules": {
-        "camel_case": 2,
-        // other rules
-      }
-    }
-    // run
-    eslint index.js --rulesdir .
-
-### Small print
+## Small print
 
 Author: Gleb Bahmutov &copy; 2014
 
