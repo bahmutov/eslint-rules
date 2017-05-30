@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-extra-rules",
   "description": "My custom eslint rules in addition to the ones provided at http://eslint.org/",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.0-development",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bugs": {
     "url": "https://github.com/bahmutov/eslint-rules/issues"
@@ -43,7 +43,7 @@
     "jshint-summary": "0.4.0",
     "matchdep": "1.0.1",
     "pre-git": "3.14.0",
-    "semantic-release": "6.3.6"
+    "semantic-release": "^6.3.6"
   },
   "engines": {
     "node": "> 0.10.*"
