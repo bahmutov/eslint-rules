@@ -8,7 +8,7 @@
   },
   "config": {
     "pre-git": {
-      "commit-msg": "validate-commit-msg",
+      "commit-msg": "simple",
       "pre-commit": [
         "npm run build",
         "npm test",
@@ -43,11 +43,11 @@
     "grunt-eslint": "17.3.1",
     "grunt-filenames": "0.4.0",
     "grunt-jscs": "2.4.0",
-    "grunt-nice-package": "0.10.1",
-    "gt": "0.9.1",
+    "grunt-nice-package": "0.10.4",
+    "gt": "0.10.0",
     "jshint-summary": "0.4.0",
-    "matchdep": "1.0.0",
-    "pre-git": "2.0.2",
+    "matchdep": "1.0.1",
+    "pre-git": "3.14.0",
     "semantic-release": "6.0.3"
   },
   "engines": {
