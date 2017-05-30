@@ -24,11 +24,6 @@
   "contributors": [
     "Eric Wooley <ericwooley@gmail.com>"
   ],
-  "files": [
-    "*.js",
-    "!Gruntfile.js",
-    "src"
-  ],
   "dependencies": {
     "espree": "3.0.0-alpha-1",
     "quote": "0.4.0"
@@ -53,14 +48,19 @@
   "engines": {
     "node": "> 0.10.*"
   },
+  "files": [
+    "*.js",
+    "!Gruntfile.js",
+    "src"
+  ],
   "homepage": "https://github.com/bahmutov/eslint-rules",
   "keywords": [
+    "custom",
     "eslint",
-    "lint",
     "javascript",
+    "lint",
     "rule",
-    "rules",
-    "custom"
+    "rules"
   ],
   "license": "MIT",
   "main": "index.js",
@@ -70,11 +70,11 @@
   },
   "scripts": {
     "build": "grunt",
-    "test": "gt test/test.js test/is-constant.js",
-    "no-long-files": "eslint --rulesdir . -c test/long-file.json test/long-file.js",
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
+    "no-long-files": "eslint --rulesdir . -c test/long-file.json test/long-file.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
+    "test": "gt test/test.js test/is-constant.js"
   }
 }
