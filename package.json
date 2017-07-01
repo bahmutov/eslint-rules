@@ -25,6 +25,7 @@
     "Eric Wooley <ericwooley@gmail.com>"
   ],
   "dependencies": {
+    "console-assert": "1.0.0",
     "espree": "3.0.0-alpha-1",
     "quote": "0.4.0"
   },
