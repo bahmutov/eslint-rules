@@ -11,6 +11,7 @@ before_script:
   - npm prune
 script:
   - npm run build
+  - ./next-update-travis.sh
   - npm test
   - npm run no-long-files
 after_success:
