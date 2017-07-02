@@ -1,4 +1,5 @@
 /* eslint-disable */
+require('console-assert').browserify()
 
 module.exports = {
   rules: {
