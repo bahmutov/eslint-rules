@@ -46,8 +46,8 @@
     "gt": "0.10.0",
     "jshint-summary": "0.4.0",
     "matchdep": "1.0.1",
-    "next-update-travis": "1.7.0",
-    "pre-git": "3.15.0",
+    "next-update-travis": "1.7.1",
+    "pre-git": "3.15.3",
     "semantic-release": "6.3.6"
   },
   "engines": {
@@ -81,5 +81,8 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "test": "gt test/test.js test/is-constant.js"
+  },
+  "release": {
+    "analyzeCommits": "simple-commit-message"
   }
 }
