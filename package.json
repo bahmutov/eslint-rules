@@ -69,6 +69,9 @@
   ],
   "license": "MIT",
   "main": "index.js",
+  "release": {
+    "analyzeCommits": "simple-commit-message"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bahmutov/eslint-rules.git"
@@ -81,8 +84,5 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "test": "gt test/test.js test/is-constant.js"
-  },
-  "release": {
-    "analyzeCommits": "simple-commit-message"
   }
 }
