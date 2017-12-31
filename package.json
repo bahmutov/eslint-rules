@@ -47,7 +47,7 @@
     "jshint-summary": "0.4.0",
     "matchdep": "1.0.1",
     "next-update-travis": "1.7.1",
-    "pre-git": "3.16.0",
+    "pre-git": "3.17.0",
     "semantic-release": "6.3.6"
   },
   "engines": {
