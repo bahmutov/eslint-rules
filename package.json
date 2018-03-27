@@ -45,7 +45,7 @@
     "grunt-nice-package": "0.10.4",
     "gt": "0.10.0",
     "jshint-summary": "0.4.0",
-    "matchdep": "1.0.1",
+    "matchdep": "2.0.0",
     "next-update-travis": "1.7.1",
     "pre-git": "3.17.1",
     "semantic-release": "15.1.4",
