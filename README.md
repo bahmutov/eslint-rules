@@ -9,6 +9,7 @@
 [![devdependencies][eslint-rules-devdependencies-image] ][eslint-rules-devdependencies-url]
 [![semantic-release][semantic-image] ][semantic-url]
 [![manpm](https://img.shields.io/badge/manpm-%E2%9C%93-3399ff.svg)](https://github.com/bahmutov/manpm)
+[![renovate-app badge][renovate-badge]][renovate-app]
 
 ## Install
 
@@ -198,3 +199,6 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 [avoid forEach]: http://aeflash.com/2014-11/avoid-foreach.html
 [point-free]: http://glebbahmutov.com/blog/point-free-programming-is-not-pointless/
+
+[renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
+[renovate-app]: https://renovateapp.com/
