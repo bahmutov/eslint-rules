@@ -48,7 +48,8 @@
     "matchdep": "1.0.1",
     "next-update-travis": "1.7.1",
     "pre-git": "3.17.1",
-    "semantic-release": "6.3.6"
+    "semantic-release": "^15.1.4",
+    "travis-deploy-once": "^4.4.1"
   },
   "engines": {
     "node": "> 0.10.*"
@@ -70,7 +71,15 @@
   "license": "MIT",
   "main": "index.js",
   "release": {
-    "analyzeCommits": "simple-commit-message"
+    "analyzeCommits": {
+      "preset": "angular",
+      "releaseRules": [
+        {
+          "type": "break",
+          "release": "major"
+        }
+      ]
+    }
   },
   "repository": {
     "type": "git",
@@ -81,8 +90,9 @@
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
     "no-long-files": "eslint --rulesdir . -c test/long-file.json test/long-file.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
-    "test": "gt test/test.js test/is-constant.js"
+    "test": "gt test/test.js test/is-constant.js",
+    "travis-deploy-once": "travis-deploy-once"
   }
 }
