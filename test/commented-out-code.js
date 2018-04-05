@@ -14,3 +14,7 @@ function baz() {
 //
 // click
 // browser-specific
+//
+// Don't count labeled statements as code, since they
+// conflict with comments like "TODO: cleanup"
+// TODO: cleanup

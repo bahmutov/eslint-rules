@@ -18,6 +18,15 @@ console.assert(isSingleWord('click'));
 console.assert(isSingleWord('browser-specific'));
 console.assert(!isSingleWord('var bar'));
 
+function isLabeledStatement(ast) {
+  'use strict';
+  if (!(ast && ast.body)) {
+    return false;
+  }
+  var firstNodeType = ast.body[0].type;
+  return firstNodeType === 'LabeledStatement';
+}
+
 function isValidCode(text) {
   'use strict';
   if (isSingleWord(text) || isJshint(text)) {
@@ -26,6 +35,9 @@ function isValidCode(text) {
 
   try {
     var ast = espree.parse(text);
+    if (isLabeledStatement(ast)) {
+      return false;
+    }
     return !!ast;
   } catch (err) {
     return false;
