@@ -29,7 +29,7 @@
   ],
   "dependencies": {
     "console-assert": "1.0.0",
-    "espree": "3.0.0-alpha-1",
+    "espree": "4.1.0",
     "quote": "0.4.0"
   },
   "devDependencies": {
