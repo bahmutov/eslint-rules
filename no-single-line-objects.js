@@ -1,7 +1,12 @@
 // detect if object with multiple properties is written in single line
 // For example this is confusing `margins: {top: 20, bottom: 20, left: 20, right: 90}`
 /* global module */
-module.exports = function (context) {
+module.exports = {
+  meta: {
+    docs: {},
+    schema: []
+  },
+  create: function (context) {
   'use strict';
 
   return {
@@ -16,4 +21,5 @@ module.exports = function (context) {
       }
     }
   };
+}
 };

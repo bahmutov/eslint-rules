@@ -47,10 +47,16 @@ function cut(str) {
   return line;
 }
 
-module.exports = function (context) {
+module.exports = {
+  meta: {
+    docs: {},
+    schema: []
+  },
+  create: function (context) {
+    const contextSourceCode = context.sourceCode ?? context.getSourceCode();
   'use strict';
 
-  var comments = context.getAllComments();
+  var comments = contextSourceCode.getAllComments();
 
   comments.filter(function (comment) {
     return isValidCode(comment.value.trim());
@@ -64,4 +70,5 @@ module.exports = function (context) {
   });
 
   return {};
+}
 };

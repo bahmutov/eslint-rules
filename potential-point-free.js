@@ -30,7 +30,12 @@ function isPotentialPointFree(node) {
     hasSameArguments(node);
 }
 
-module.exports = function (context) {
+module.exports = {
+  meta: {
+    docs: {},
+    schema: []
+  },
+  create: function (context) {
   'use strict';
 
   // read http://bahmutov.calepin.co/point-free-programming-is-not-pointless.html
@@ -47,4 +52,5 @@ module.exports = function (context) {
       }
     }
   };
+}
 };

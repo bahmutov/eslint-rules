@@ -1,8 +1,14 @@
-module.exports = function (context) {
+module.exports = {
+  meta: {
+    docs: {},
+    schema: []
+  },
+  create: function (context) {
   'use strict';
   return {
     Function: function (node) {
       context.report(node, 'for loops are not allowed', { identifier: node.name });
     }
   };
+}
 };
