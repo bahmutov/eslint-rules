@@ -1,8 +1,13 @@
-module.exports = function (context) {
+module.exports = {
+  meta: {
+    docs: {},
+    schema: [] // TODO: Define schema - this rule uses context.options
+  },
+  create: function (context) {
   'use strict';
 
   // TODO use context.getSourceLines()
-  var src = require('fs').readFileSync(context.getFilename(), 'utf-8');
+  var src = require('fs').readFileSync(context.filename ?? context.getFilename(), 'utf-8');
   var linesN = src.split(require('os').EOL).length;
   // console.log(context.getFilename(), 'has', linesN, 'lines');
 
@@ -16,4 +21,5 @@ module.exports = function (context) {
   }
 
   return {};
+}
 };
