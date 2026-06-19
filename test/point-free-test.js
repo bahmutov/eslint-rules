@@ -1,6 +1,6 @@
 'use strict';
 
-/* eslint potential-point-free:1 */
+/* eslint extra-rules/potential-point-free:1 */
 function print(x) {
   console.log(x);
 }
