@@ -1,4 +1,4 @@
-/* eslint no-commented-out-code:1 */
+/* eslint extra-rules/no-commented-out-code:1 */
 /*
 function foo() {
   return 'foo';
